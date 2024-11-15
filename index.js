@@ -1,11 +1,11 @@
-const express = require('express');          // Import Express once
-const mongoose = require('mongoose');         // Import Mongoose once
+const express = require('express');
+const mongoose = require('mongoose');
 const todoRoutes = require('./routes/todos'); // Import routes
 
-const app = express();                        // Initialize Express app
+const app = express(); // Initialize Express app
 
-// MongoDB connection string
-const connectionString = 'mongodb+srv://Balu:Balu%40123@cluster0.i2gep.mongodb.net/todoDB?retryWrites=true&w=majority';
+// MongoDB connection string - use environment variable for security
+const connectionString = process.env.MONGO_URI || 'mongodb+srv://Balu:Balu%40123@cluster0.i2gep.mongodb.net/todoDB?retryWrites=true&w=majority';
 
 // Connect to MongoDB
 mongoose.connect(connectionString)
@@ -22,7 +22,8 @@ app.use(express.json());
 // Use the todoRoutes for routes starting with /api
 app.use('/api', todoRoutes);
 
-const PORT = 3000;
+// Dynamically assign port or default to 3000
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
