@@ -1,6 +1,6 @@
 # TO-DO Backend API
 
-This is a backend API for managing a simple To-Do list application. The API supports the core CRUD operations: Create, Read, Update, and Delete to interact with To-Do items. It is built with [Node.js](https://nodejs.org/), [Express](https://expressjs.com/), and a simple in-memory data store (or database of your choice).
+This is a backend API for managing a simple To-Do list application. The API supports the core CRUD operations: Create, Read, Update, and Delete to interact with To-Do items. It is built with [Node.js](https://nodejs.org/), [Express](https://expressjs.com/).
 
 ## Features
 
