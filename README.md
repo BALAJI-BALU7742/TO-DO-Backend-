@@ -24,19 +24,3 @@ Clone the repository to your local machine:
 git clone https://github.com/BALAJI-BALU7742/TO-DO-Backend.git
 Navigate to the project directory:
 
-cd TO-DO-Backend
-Install the required dependencies:
-
-
-npm install
-Start the server:
-
-
-npm start
-The API will be running on http://localhost:3000.
-
-Error Handling
-400 Bad Request: If required fields are missing (e.g., title or description).
-404 Not Found: If a To-Do item is not found by its ID.
-500 Internal Server Error: For unexpected server errors.
-
