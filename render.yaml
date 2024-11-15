@@ -6,3 +6,6 @@ services:
     buildCommand: npm install
     startCommand: npm start
     branch: master
+    envVars:
+      - key: MONGO_URI
+        value: "mongodb+srv://Balu:Balu%40123@cluster0.i2gep.mongodb.net/todoDB?retryWrites=true&w=majority"
